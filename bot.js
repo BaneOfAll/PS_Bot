@@ -1,6 +1,12 @@
 var SDClient = require('./client.js');
 var config = require('./config.js');
 
+//You can delete this part later.
+if (config.admin === "ADMIN" || config.nickName === "BOTNAME" || config.pass === "PASSWORD" || config.prefix === "PREFIX") {
+	console.log("Please update the details in config.js.");
+	return process.exit();
+}
+
 var options = {
 	serverid: config.serverid,
 	loginServer: 'https://play.pokemonshowdown.com/~~' + config.serverid +'/action.php',
